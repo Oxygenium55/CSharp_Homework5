@@ -24,12 +24,12 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
-int OddNumbers(int[] array)
+int OddIndex(int[] array)
 {
     int summ = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[i] % 2 != 0)
+        if(i % 2 != 0) //считаю нечетные позиции, начиная с нуля. Если нужно считать с 1, то i % 2 = 0
         summ = summ + array[i];
     }
     return summ;
@@ -39,5 +39,5 @@ Console.Write("Введите длину массива: ");
 int number = int.Parse(Console.ReadLine());
 int[] arr = MakeArray(number);
 PrintArray(arr);
-int result = OddNumbers(arr);
-Console.WriteLine($"Сумма нечетных чисел в массиве: {result}");
+int result = OddIndex(arr);
+Console.WriteLine($"Сумма чисел на нечетных позициях в массиве: {result}");
