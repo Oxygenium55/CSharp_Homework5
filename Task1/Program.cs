@@ -26,13 +26,13 @@ void PrintArray(int[] array)
 
 int EvenNumbers(int[] array)
 {
-    int element = 0;
+    int amount = 0;
     for (int i = 0; i < array.Length; i++)
     {
         if(array[i] % 2 == 0)
-        element = element + 1;
+        amount = amount + 1;
     }
-    return element;
+    return amount;
 }
 
 Console.Write("Введите длину массива: ");
